@@ -1,0 +1,141 @@
+/* header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+   display: flex;
+   width: 100%;
+   height: 40px;
+   background-color: #f53d2d; 
+   justify-content: space-around;
+}
+.header .head {
+    display: flex;
+    gap: .5rem;
+    /* align-items: center; */
+}
+.eD{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0.25rem;
+    position: relative;
+}
+.header .head .eD {
+    margin-top: 6px;
+}
+.header .head div .eD {
+    text-decoration: none;
+    display: block;
+    color: hsla(0, 0%, 100%, .9);
+}
+.header .navbar .eD {
+    margin-bottom: 90px;
+}
+.eD:hover{
+    font-size: 80%;
+}
+.navigation {
+    background-color: #f53d2d;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navigation div input {
+    width: 900px;
+    height: 35px;
+}
+
+.navigation .logo img {
+    width: 100px;
+    margin-left: 80px;
+}
+
+.navigation div .fa-magnifying-glass {
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.b { 
+    color: hsla(0, 0%, 100%, .9);
+    text-decoration: none;
+}
+
+.b:hover {
+    color: hsla(0, 0%, 100%, .9);
+}
+/* main */
+.main {
+    
+    margin-left: 70px;
+    margin-top: 50px;
+    width: 100%;
+}
+.main .main1 {
+    display: flex;
+    gap: 10px;
+}
+
+.main .main2 {
+    display: flex;
+    gap: 15px;
+}
+/* footer */
+.footer-container {
+    background-color: #fbfbfb;
+  
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-column h3 {
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+  }
+  .footer-column li {
+    list-style: none;
+    font-size: smaller;
+    line-height: 30px;
+  }
+  .footer-column2 {
+    width: 200px;
+    height: auto;
+  }
+  .footer-column2 h3 {
+    margin: 20px 0 10px 0;
+  }
+  .footer-column2 li {
+    list-style: none;
+    line-height: 30px;
+  }
+  .footer-column2 ul {
+    display: flex;
+    gap: 10px;
+  }
+  .footer-column2 li img {
+    border: 1px solid black;
+  }
+  
+  .movie-container {
+    padding: 0 100px;
+    /* margin: 0 100px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* flex-direction: row;  */
+  }
+  .movie-container .card {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    width: 60%;
+  }
+  
