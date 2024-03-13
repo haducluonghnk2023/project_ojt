@@ -84,7 +84,7 @@ formRegister.addEventListener("submit", function(e) {
         // Lưu thông tin người dùng vào localStorage
         user.push(newUser);
         localStorage.setItem("users", JSON.stringify(user));
-
+        
         // Chuyển hướng đến trang đăng nhập
         window.location.href = "login.html";
     } else {
@@ -99,14 +99,3 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-//     // Hàm đăng ký
-    // function register() {
-    //     // Code xử lý đăng ký
-    //     // Sau khi đăng ký thành công, gọi lại hàm checkLogin để cập nhật giao diện
-    //     checkLogin();
-    // }
-        // function checkLogin(){
-        //     if(firstName == firstName.value && lastName == lastName.value && email == email.value && password == password.value){
-        //         document.getElementById("login").innerHTML = "tài khoản đã được đăng kí";
-        //     }
-        // }
