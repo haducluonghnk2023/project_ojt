@@ -32,62 +32,49 @@
 // tạo mảng chứa danh sách sản phẩm
 // quản lí product
 
-let products = [
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    {
-        image : "./asset/images/chuot 1.jpg",
-        name : "chuot khong day",
-        price :"1.200.000",
-        id : 1,
-        stock : 20,
-    },
-    
-];
+
+//lấy dữ liệu về render
+let products = JSON.parse(localStorage.getItem("products"));
+
+
+// function render Product
+function renderProduct(){
+    let element = "";
+    let element2 ="";
+    for (let i = 0; i < products.length/2; i++) {
+        element += 
+        `
+        <div class="products__item">
+            <div>
+                <img src="${products[i].image}" alt="">
+            </div>
+            <p${products[i].name}</p>
+            <div>
+                <p>Giá : ${products[i].price}</p>
+                <button>mua</button>
+            </div>
+        </div>
+
+        `
+        ;
+    }
+    for (let i = products.length/2; i < products.length; i++) {
+        element2 += 
+        `
+        <div class="products__item">
+            <div>
+                <img src="${products[i].image}" alt="">
+            </div>
+            <p>${products[i].name}</p>
+            <div>
+                <p>Giá : ${products[i].price}</p>
+                <button>mua</button>
+            </div>
+        </div>
+        `
+        ;
+    }
+    document.getElementById("product").innerHTML = element;
+    document.getElementById("product2").innerHTML = element2;
+}
+renderProduct();
